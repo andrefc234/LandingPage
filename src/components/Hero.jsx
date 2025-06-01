@@ -8,7 +8,7 @@ export default function Hero() {
       textAlign="center"
     >
       <Image
-        src="/images/portada.jpg"
+        src="portada.jpg"
         alt="Portada del artista"
         mx="auto"
         borderRadius="lg"
