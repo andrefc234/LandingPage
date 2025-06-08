@@ -8,7 +8,7 @@ import MusicPlayer from '../components/MusicPlayer';
 
 import Merch from '../components/Merch';
 import Gallery from '../components/Gallery';
-import SocialMedia from '../components/SocialLinks';
+import SocialMedia from '../components/SocialMedia';
 
 import Footer from '../components/Footer';
 
