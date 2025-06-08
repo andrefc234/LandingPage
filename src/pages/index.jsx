@@ -9,7 +9,7 @@ import MusicPlayer from '../components/MusicPlayer';
 import Merch from '../components/Merch';
 import Gallery from '../components/Gallery';
 import SocialMedia from '../components/SocialMedia';
-
+import YouTubeCarousel from '../components/YouTubeCarousel'
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
       <Hero />
       <LatestRelease />
       <MusicPlayer />
-    
+   <YouTubeCarousel/>
       <Merch />
       <Gallery />
       <SocialMedia />
