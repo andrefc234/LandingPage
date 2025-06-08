@@ -1,36 +1,20 @@
-import { Box, Heading, Text, Flex, Button } from "@chakra-ui/react";
-import { FaSpotify, FaYoutube } from "react-icons/fa";
-
+import { Box, Heading } from '@chakra-ui/react';
 export default function MusicPlayer() {
   return (
-    <Box id="musica" bg="gray.900" color="white" py={10} px={6}>
-      <Heading textAlign="center" mb={4}>
-        Escucha mi música
+    <Box py={16} px={6} textAlign="center">
+      <Heading as="h2" mb={8} color="teal.400">
+        🎧 Escucha Ahora
       </Heading>
-      <Text textAlign="center" mb={6}>
-        Disponible en todas las plataformas.
-      </Text>
-
-      <Flex justify="center" gap={4}>
-        <Button
-          as="a"
-          href="https://open.spotify.com/"
-          target="_blank"
-          leftIcon={<FaSpotify />}
-          colorScheme="green"
-        >
-          Spotify
-        </Button>
-        <Button
-          as="a"
-          href="https://youtube.com/"
-          target="_blank"
-          leftIcon={<FaYoutube />}
-          colorScheme="red"
-        >
-          YouTube
-        </Button>
-      </Flex>
+      <Box maxW="3xl" mx="auto" rounded="xl" overflow="hidden" shadow="lg">
+        <iframe
+          src="https://open.spotify.com/embed/track/TU-TRACK-ID"
+          width="100%"
+          height="380"
+          frameBorder="0"
+          allow="encrypted-media"
+          loading="lazy"
+        ></iframe>
+      </Box>
     </Box>
   );
 }
