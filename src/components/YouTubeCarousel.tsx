@@ -5,9 +5,9 @@ import { Box, useColorModeValue } from '@chakra-ui/react';
 import ReactPlayer from 'react-player/youtube';
 
 const videos = [
-  'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-  'https://www.youtube.com/watch?v=3JZ_D3ELwOQ',
-  'https://www.youtube.com/watch?v=Zi_XLOBDo_Y',
+  'https://www.youtube.com/embed/Yx7swpWXZvE?si=W51g3tUd8-dX-ER8',
+  'https://www.youtube.com/embed/SDqyNN4RIWU?si=qjGUTBvWhZ7iwQIc',
+  'https://www.youtube.com/embed/fCPRx55DbpE?si=CYYVExQ6cUWuCA_Z',
 ];
 
 const YouTubeCarousel = () => {
