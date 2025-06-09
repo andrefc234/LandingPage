@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <Box
       as="section"
-      bgImage="url('/portadakiller.jpg')"
+      bgImage="url('/miniatura1.jpg.jpg')"
       bgSize="cover"
       bgPosition="center"
       h={{ base: "100vh", md: "90vh" }}
