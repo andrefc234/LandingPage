@@ -38,7 +38,8 @@ export default function YouTubeCarousel() {
         </Heading>
         <Text fontSize="md" color={useColorModeValue('gray.600', 'gray.300')}>
           Descubre el sonido más fresco y contundente del momento. Estos videos son parte de su nueva producción.
-       
+        </Text>
+        
       </VStack>
 
       <Slider {...settings}>
