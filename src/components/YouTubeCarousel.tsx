@@ -38,25 +38,7 @@ export default function YouTubeCarousel() {
         </Heading>
         <Text fontSize="md" color={useColorModeValue('gray.600', 'gray.300')}>
           Descubre el sonido más fresco y contundente del momento. Estos videos son parte de su nueva producción.
-        </Text>
-        <Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
-          <Button
-            colorScheme="teal"
-            size="md"
-            rightIcon={<ArrowForwardIcon />}
-            onClick={() => window.location.href = '/music'}
-          >
-            Ver más música
-          </Button>
-          <Button
-            variant="outline"
-            colorScheme="teal"
-            size="md"
-            onClick={() => window.location.href = '/contact'}
-          >
-            Contactar para colaboraciones
-          </Button>
-        </Stack>
+       
       </VStack>
 
       <Slider {...settings}>
