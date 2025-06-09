@@ -1,5 +1,5 @@
 // components/LatestRelease.tsx
-import { Box, Heading, Text, Image, Button, Stack } from "@chakra-ui/react";
+import { Box, Heading, Text, Image, Button, Stack, Link } from "@chakra-ui/react";
 
 export default function LatestRelease() {
   return (
@@ -15,14 +15,14 @@ export default function LatestRelease() {
       borderRadius="xl"
     >
       <Heading fontSize="3xl" mb={4}>
-        Nuevo Lanzamiento: "Trató Súbito"
+        Nuevo Lanzamiento: "killer"
       </Heading>
       <Text fontSize="lg" mb={6}>
         Experimenta la energía cruda y acelerada de RAFKU en su track más explosivo hasta ahora.
       </Text>
 
       <Image
-        src="/trato-subito-cover.jpg"
+        src="/killer.jpg"
         alt="Portada Trató Súbito"
         borderRadius="lg"
         mb={6}
@@ -31,12 +31,17 @@ export default function LatestRelease() {
       />
 
       <Stack direction="row" spacing={4} justify="center">
-        <Button colorScheme="red" size="lg">
-          Escuchar en Spotify
-        </Button>
-        <Button colorScheme="whiteAlpha" size="lg" variant="outline">
-          Ver en YouTube
-        </Button>
+        <Link href="https://spfy.oia.bio/rafku" isExternal>
+          <Button colorScheme="red" size="lg">
+            Escuchar en Spotify
+          </Button>
+        </Link>
+
+        <Link href="https://killer.oia.bio/YT" isExternal>
+          <Button colorScheme="whiteAlpha" size="lg" variant="outline">
+            Ver en YouTube
+          </Button>
+        </Link>
       </Stack>
     </Box>
   );
