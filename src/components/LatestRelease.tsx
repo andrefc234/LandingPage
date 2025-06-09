@@ -22,7 +22,7 @@ export default function LatestRelease() {
       </Text>
 
       <Image
-        src="/killer.jpg"
+        src="/Killer.jpg"
         alt="Portada Trató Súbito"
         borderRadius="lg"
         mb={6}
