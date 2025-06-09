@@ -29,7 +29,7 @@ export default function Home() {
       <MusicPlayer />
    <YouTubeCarousel/>
     
-      <Gallery />
+    
        <Box my={12}>
       <SocialMedia />
     </Box>
