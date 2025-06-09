@@ -1,5 +1,6 @@
 
 import Navbar from "../components/Navbar";
+import { Box } from '@chakra-ui/react';
 
 import Head from 'next/head';
 import Hero from '../components/Hero';
@@ -22,13 +23,16 @@ export default function Home() {
       </Head>
   <Navbar />
       <Hero />
+      <Box my={12}>
       <LatestRelease />
+    </Box>
       <MusicPlayer />
    <YouTubeCarousel/>
     
       <Gallery />
+       <Box my={12}>
       <SocialMedia />
-   
+    </Box>
       <Footer />
     </>
   );
