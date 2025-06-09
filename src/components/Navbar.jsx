@@ -24,7 +24,7 @@ const Navbar = () => {
           bgClip="text"
           textTransform="uppercase"
         >
-          RAFKU⛧
+          ⛧RAFKU
         </Text>
       </Flex>
     </Box>
