@@ -35,7 +35,7 @@ export default function YouTubeCarousel() {
   return (
     <Box
       as="section"
-      maxW={{ base: "95%", md: "900px" }}
+      maxW={{ base: "90%", md: "900px" }}
       mx="auto"
       py={{ base: 8, md: 12 }}
       px={{ base: 2, md: 4 }}
