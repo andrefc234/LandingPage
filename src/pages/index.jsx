@@ -25,7 +25,7 @@ export default function Home() {
       <LatestRelease />
       <MusicPlayer />
    <YouTubeCarousel/>
-      <Merch />
+    
       <Gallery />
       <SocialMedia />
    
