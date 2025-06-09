@@ -8,17 +8,15 @@ import {
   Icon,
   Heading,
   Text,
-  Button,
-  Stack,
 } from '@chakra-ui/react';
 import ReactPlayer from 'react-player/youtube';
 import { FaPlayCircle } from 'react-icons/fa';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 const videoIds = ['Yx7swpWXZvE', 'SDqyNN4RIWU', 'fCPRx55DbpE'];
 
 export default function YouTubeCarousel() {
   const bg = useColorModeValue('gray.100', 'gray.800');
+  const textColor = useColorModeValue('gray.600', 'gray.300');
 
   const settings = {
     dots: true,
@@ -28,27 +26,46 @@ export default function YouTubeCarousel() {
     arrows: true,
     lazyLoad: 'ondemand',
     adaptiveHeight: true,
+    accessibility: true,
+    autoplay: false,
+    pauseOnHover: true,
+    swipeToSlide: true,
   };
 
   return (
-    <Box maxW="900px" mx="auto" py={12} px={4} bg={bg} rounded="3xl" shadow="2xl">
+    <Box
+      as="section"
+      maxW={{ base: "95%", md: "900px" }}
+      mx="auto"
+      py={{ base: 8, md: 12 }}
+      px={{ base: 2, md: 4 }}
+      bg={bg}
+      rounded="3xl"
+      shadow="2xl"
+      role="region"
+      aria-label="Carrusel de videos de YouTube de RAFKU"
+    >
       <VStack spacing={6} textAlign="center" mb={8}>
-        <Heading size="lg" color="teal.400">
+        <Heading
+          as="h2"
+          size={{ base: "md", md: "lg" }}
+          color="teal.400"
+          fontWeight="extrabold"
+        >
           🎥 Mira los últimos videoclips de RAFKU
         </Heading>
-        <Text fontSize="md" color={useColorModeValue('gray.600', 'gray.300')}>
+        <Text fontSize={{ base: "sm", md: "md" }} color={textColor} maxW="lg" mx="auto">
           Descubre el sonido más fresco y contundente del momento. Estos videos son parte de su nueva producción.
         </Text>
-        
       </VStack>
 
       <Slider {...settings}>
-        {videoIds.map((id, idx) => (
-          <VStack key={idx} spacing={4} p={6}>
+        {videoIds.map((id) => (
+          <VStack key={id} spacing={4} p={4}>
             <Box
               w="full"
               position="relative"
-              pt="56.25%"
+              pt="56.25%" // 16:9 aspect ratio
               borderRadius="lg"
               overflow="hidden"
               boxShadow="lg"
@@ -57,7 +74,17 @@ export default function YouTubeCarousel() {
                 url={`https://www.youtube.com/watch?v=${id}`}
                 controls
                 light={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
-                playIcon={<Icon as={FaPlayCircle} w={16} h={16} color="red.500" />}
+                playIcon={
+                  <Icon
+                    as={FaPlayCircle}
+                    w={16}
+                    h={16}
+                    color="red.500"
+                    aria-label="Reproducir video"
+                    role="button"
+                    tabIndex={0}
+                  />
+                }
                 width="100%"
                 height="100%"
                 style={{ position: 'absolute', top: 0, left: 0 }}
