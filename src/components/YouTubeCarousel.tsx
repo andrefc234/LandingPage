@@ -1,11 +1,15 @@
+
 // components/YouTubeCarousel.tsx
 import React from 'react';
 import Slider from 'react-slick';
 import { Box, useColorModeValue, Icon } from '@chakra-ui/react';
 import ReactPlayer from 'react-player/youtube';
 import { FaPlayCircle } from 'react-icons/fa';
-
-const videos = [ /* tus URLs */ ];
+const videos = [
+  'https://www.youtube.com/embed/Yx7swpWXZvE?si=W51g3tUd8-dX-ER8',
+  'https://www.youtube.com/embed/SDqyNN4RIWU?si=qjGUTBvWhZ7iwQIc',
+  'https://www.youtube.com/embed/fCPRx55DbpE?si=CYYVExQ6cUWuCA_Z',
+];
 
 const YouTubeCarousel = () => {
   const bg = useColorModeValue('gray.100', 'gray.700');
