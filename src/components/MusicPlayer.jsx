@@ -6,14 +6,7 @@ export default function MusicPlayer() {
         🎧 Escucha Ahora
       </Heading>
       <Box maxW="3xl" mx="auto" rounded="xl" overflow="hidden" shadow="lg">
-        <iframe
-          src="https://open.spotify.com/embed/track/TU-TRACK-ID"
-          width="100%"
-          height="380"
-          frameBorder="0"
-          allow="encrypted-media"
-          loading="lazy"
-        ></iframe>
+       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4YuFJgKHwqHHY5WxMpyWJO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </Box>
     </Box>
   );
