@@ -1,22 +1,34 @@
-import { Box, Flex, Heading, Spacer, Link } from "@chakra-ui/react";
+// components/Navbar.tsx
+import { Box, Flex, Text } from "@chakra-ui/react";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <Box as="nav" bg="black" color="white" px={6} py={4} boxShadow="lg">
-      <Flex align="center">
-        <Heading size="md" fontWeight="bold">
-          Nombre del Artista
-        </Heading>
-        <Spacer />
-        <Flex gap={4}>
-          <Link href="#musica" _hover={{ color: "brand.primary" }}>
-            Música
-          </Link>
-          <Link href="#contacto" _hover={{ color: "brand.primary" }}>
-            Contacto
-          </Link>
-        </Flex>
+    <Box
+      as="header"
+      bg="black"
+      color="white"
+      py={4}
+      px={8}
+      boxShadow="md"
+      position="sticky"
+      top="0"
+      zIndex="1000"
+    >
+      <Flex justify="center" align="center">
+        <Text
+          fontSize={{ base: "2xl", md: "3xl" }}
+          fontWeight="bold"
+          letterSpacing="widest"
+          fontFamily="'Orbitron', sans-serif"
+          bgGradient="linear(to-r, red.500, pink.400)"
+          bgClip="text"
+          textTransform="uppercase"
+        >
+          RAF⛧KU
+        </Text>
       </Flex>
     </Box>
   );
-}
+};
+
+export default Navbar;
