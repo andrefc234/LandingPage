@@ -1,14 +1,25 @@
 // components/YouTubeCarousel.tsx
 import React from 'react';
 import Slider from 'react-slick';
-import { Box, VStack, useColorModeValue, Icon } from '@chakra-ui/react';
+import {
+  Box,
+  VStack,
+  useColorModeValue,
+  Icon,
+  Heading,
+  Text,
+  Button,
+  Stack,
+} from '@chakra-ui/react';
 import ReactPlayer from 'react-player/youtube';
 import { FaPlayCircle } from 'react-icons/fa';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 const videoIds = ['Yx7swpWXZvE', 'SDqyNN4RIWU', 'fCPRx55DbpE'];
 
 export default function YouTubeCarousel() {
   const bg = useColorModeValue('gray.100', 'gray.800');
+
   const settings = {
     dots: true,
     infinite: true,
@@ -20,7 +31,34 @@ export default function YouTubeCarousel() {
   };
 
   return (
-    <Box maxW="900px" mx="auto" py={12} bg={bg} rounded="3xl" shadow="2xl">
+    <Box maxW="900px" mx="auto" py={12} px={4} bg={bg} rounded="3xl" shadow="2xl">
+      <VStack spacing={6} textAlign="center" mb={8}>
+        <Heading size="lg" color="teal.400">
+          🎥 Mira los últimos videoclips de RAFKU
+        </Heading>
+        <Text fontSize="md" color={useColorModeValue('gray.600', 'gray.300')}>
+          Descubre el sonido más fresco y contundente del momento. Estos videos son parte de su nueva producción.
+        </Text>
+        <Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
+          <Button
+            colorScheme="teal"
+            size="md"
+            rightIcon={<ArrowForwardIcon />}
+            onClick={() => window.location.href = '/music'}
+          >
+            Ver más música
+          </Button>
+          <Button
+            variant="outline"
+            colorScheme="teal"
+            size="md"
+            onClick={() => window.location.href = '/contact'}
+          >
+            Contactar para colaboraciones
+          </Button>
+        </Stack>
+      </VStack>
+
       <Slider {...settings}>
         {videoIds.map((id, idx) => (
           <VStack key={idx} spacing={4} p={6}>
